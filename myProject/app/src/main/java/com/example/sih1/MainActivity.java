@@ -6,18 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import android.widget.TextView;
-
-public class MainActivity extends AppCompatActivity {
-
-    TextView tvAuth;
-
 import android.widget.Button;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
 
     Button btnSignIn, btnCreateAcc;
+    TextView tvAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +26,10 @@ public class MainActivity extends AppCompatActivity {
         tvAuth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,AuthorityRegister.class);
+                Intent intent = new Intent(MainActivity.this, AuthorityRegister.class);
+                startActivity(intent);
+            }
+        });
 
         btnSignIn = findViewById(R.id.btnSignIn);
         btnCreateAcc = findViewById(R.id.btnCreateAcc);
@@ -51,5 +50,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 }
