@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DC000000"
+    tools:context=".AddIssueActivity">
+
+    <ImageView
+        android:id="@+id/ivIssue"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        android:background="@drawable/button_design"
+        android:src="@drawable/issueimage"
+        android:layout_centerHorizontal="true"
+        android:padding="20dp"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/etIssueDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivIssue"
+        android:inputType="textMultiLine"
+        android:layout_marginTop="30dp"
+        android:padding="20dp"
+        android:hint="Issue Description"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/inp_design"
+        android:textColorHint="#96FFFFFF"
+        android:textColor="@android:color/white"/>
+
+
+
+
+    <Button
+        android:id="@+id/btnAddIssue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etIssueDescription"
+        android:text="Report Issue"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:padding="15dp"
+        android:layout_marginTop="40dp"
+        android:textSize="22sp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:background="@drawable/button_design"
+        />
+
+</RelativeLayout>
