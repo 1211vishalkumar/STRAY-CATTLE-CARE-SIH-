@@ -117,12 +117,12 @@ public class UserSettingsActivity extends AppCompatActivity {
     private void updateOnlyUserInfo() {
         // in this we are not going to upadate the profie image of the user because the user has not clicked on it
 
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users");
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("User");
 
         HashMap<String,Object> userMap = new HashMap<>();
         userMap.put("name",edSettingsFullName.getText().toString());
         userMap.put("address",edSettingAddress.getText().toString());
-        userMap.put("phoneOrder",edSettingsPhoneNo.getText().toString());
+        userMap.put("phone",edSettingsPhoneNo.getText().toString());
         ref.child(CurrentUser.currentOnlineUser.getPhone()).updateChildren(userMap);
 
 
@@ -201,12 +201,12 @@ public class UserSettingsActivity extends AppCompatActivity {
                         Uri downloadUrl = task.getResult();
                         myUrl = downloadUrl.toString();
 
-                        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users");
+                        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("User");
 
                         HashMap<String,Object> userMap = new HashMap<>();
                         userMap.put("name",edSettingsFullName.getText().toString());
                         userMap.put("address",edSettingAddress.getText().toString());
-                        userMap.put("phoneOrder",edSettingsPhoneNo.getText().toString());
+                        userMap.put("phone",edSettingsPhoneNo.getText().toString());
                         userMap.put("image",myUrl);
 
                         ref.child(CurrentUser.currentOnlineUser.getPhone()).updateChildren(userMap);
@@ -233,7 +233,7 @@ public class UserSettingsActivity extends AppCompatActivity {
 
     private void userInfoDisplay(final CircleImageView settingProfileImage, final EditText edSettingsFullName, final EditText edSettingsPhoneNo, final EditText edSettingAddress) {
         // now we need to create a database ref for the specific user who id logged in
-        DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("Users").child(CurrentUser.currentOnlineUser.getPhone());
+        DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("User").child(CurrentUser.currentOnlineUser.getPhone());
         userRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -243,7 +243,7 @@ public class UserSettingsActivity extends AppCompatActivity {
                         // if the image exist then fetch and display the info of the user on the settings Activity
                         String image = dataSnapshot.child("image").getValue().toString();
                         String name = dataSnapshot.child("name").getValue().toString();
-                        String phone = dataSnapshot.child("phoneNo").getValue().toString();
+                        String phone = dataSnapshot.child("phone").getValue().toString();
                         String address = dataSnapshot.child("address").getValue().toString();
 
                         Picasso.get().load(image).into(settingProfileImage);
