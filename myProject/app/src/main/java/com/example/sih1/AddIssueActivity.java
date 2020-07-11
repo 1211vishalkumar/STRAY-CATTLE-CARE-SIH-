@@ -45,6 +45,8 @@ public class AddIssueActivity extends AppCompatActivity {
     private Spinner state_Spinner;
     private Spinner city_Spinner;
 
+    private String status="Not solved";
+
     private ArrayAdapter<Country> countryArrayAdapter;
     private ArrayAdapter<State> stateArrayAdapter;
     private ArrayAdapter<City> cityArrayAdapter;
@@ -209,7 +211,7 @@ public class AddIssueActivity extends AppCompatActivity {
         issueMap.put("description", Description);
         issueMap.put("image", downloadImageUrl);
         issueMap.put("category", categoryName);
-        issueMap.put("issueState", "Not solved");
+        issueMap.put("issueState", status);
         issueMap.put("userName", uName);
         issueMap.put("userPhone", uPhone);
         issueMap.put("country",country);
