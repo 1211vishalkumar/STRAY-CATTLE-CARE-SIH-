@@ -51,5 +51,5 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-database:3.2.2'//dependency for using firebase recycler view
 
     //adding AurtherHub library to crop the image
-    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.0'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.+'
 }
