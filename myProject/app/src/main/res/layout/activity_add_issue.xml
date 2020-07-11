@@ -126,6 +126,8 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="40dp"
         android:background="@drawable/button_design"
+        android:textAllCaps="false"
+        android:textStyle="bold"
         android:text="Report"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
