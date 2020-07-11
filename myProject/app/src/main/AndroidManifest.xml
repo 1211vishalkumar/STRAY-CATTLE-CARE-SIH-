@@ -9,20 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AuthorityLogIn"></activity>
+        <activity android:name=".Authority.AuthorityLogIn"></activity>
         <activity android:name=".IssueCategoryActivity" />
         <activity android:name=".UserSettingsActivity" />
         <activity android:name=".AddIssueActivity" />
         <activity android:name=".IssueDetailActivity" />
-        <activity android:name=".AdminMaintainIssuesActivity" />
+        <activity android:name=".Admin.AdminMaintainIssuesActivity" />
         <activity android:name=".PasswordResetActivity" />
-        <activity android:name=".AdminHomeActivity" />
+        <activity android:name=".Admin.AdminHomeActivity" />
         <activity
             android:name=".UserHomeActivity"
             android:label="@string/title_activity_user_home"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AuthorityHomeActivity" />
-        <activity android:name=".AuthorityRegister" />
+        <activity android:name=".Authority.AuthorityHomeActivity" />
+        <activity android:name=".Authority.AuthorityRegister" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".UserRegisterActivity" />
         <activity android:name=".MainActivity">

@@ -1,4 +1,4 @@
-package com.example.sih1;
+package com.example.sih1.Authority;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.sih1.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -77,7 +78,7 @@ public class AuthorityRegister extends AppCompatActivity {
         btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AuthorityRegister.this,AuthorityLogIn.class);
+                Intent intent = new Intent(AuthorityRegister.this, AuthorityLogIn.class);
                 startActivity(intent);
             }
         });

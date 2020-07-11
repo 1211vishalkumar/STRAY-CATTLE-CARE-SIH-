@@ -1,8 +1,10 @@
-package com.example.sih1;
+package com.example.sih1.Admin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.sih1.R;
 
 public class AdminMaintainIssuesActivity extends AppCompatActivity {
 

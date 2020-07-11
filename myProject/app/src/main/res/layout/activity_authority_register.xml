@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D6000000"
-    tools:context=".AuthorityRegister">
+    tools:context=".Authority.AuthorityRegister">
 
     <TextView
         android:padding="5dp"

@@ -1,14 +1,16 @@
-package com.example.sih1;
+package com.example.sih1.Authority;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class AdminHomeActivity extends AppCompatActivity {
+import com.example.sih1.R;
+
+public class AuthorityHomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_home);
+        setContentView(R.layout.activity_authority_home);
     }
 }
