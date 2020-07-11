@@ -1,21 +1,34 @@
 package com.example.sih1;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.Continuation;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
+import com.squareup.picasso.Picasso;
+import com.theartofdev.edmodo.cropper.CropImage;
+
 
 import java.util.HashMap;
 
@@ -136,7 +149,7 @@ public class UserSettingsActivity extends AppCompatActivity {
             // if there any error occurs now we gonna display a tosat to the user'
             Toast.makeText(this, "Error : try again", Toast.LENGTH_SHORT).show();
             //refreshing the setting Activity
-            startActivity(new Intent(SettingActivity.this,SettingActivity.class));
+            startActivity(new Intent(UserSettingsActivity.this,UserSettingsActivity.class));
             finish();
 
         }
@@ -169,7 +182,7 @@ public class UserSettingsActivity extends AppCompatActivity {
         progressDialog.show();
 
         if(imageUri != null){
-            final StorageReference fileRef =  storageProfilePictureRef.child(Prevalent.currentOnlineUser.getPhoneNo() + ".jpg");
+            final StorageReference fileRef =  storageProfilePictureRef.child(CurrentUser.currentOnlineUser.getPhone() + ".jpg");
 
             uploadTask = fileRef.putFile(imageUri);
 
@@ -196,17 +209,17 @@ public class UserSettingsActivity extends AppCompatActivity {
                         userMap.put("phoneOrder",edSettingsPhoneNo.getText().toString());
                         userMap.put("image",myUrl);
 
-                        ref.child(Prevalent.currentOnlineUser.getPhoneNo()).updateChildren(userMap);
+                        ref.child(CurrentUser.currentOnlineUser.getPhone()).updateChildren(userMap);
 
                         progressDialog.dismiss();
-                        startActivity(new Intent(SettingActivity.this,HomeActivity.class));
+                        startActivity(new Intent(UserSettingsActivity.this,UserHomeActivity.class));
 
-                        Toast.makeText(SettingActivity.this, "Profile Info updated Successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(UserSettingsActivity.this, "Profile Info updated Successfully", Toast.LENGTH_SHORT).show();
                         finish();
 
                     }else{
                         progressDialog.dismiss();
-                        Toast.makeText(SettingActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(UserSettingsActivity.this, "Error", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -220,7 +233,7 @@ public class UserSettingsActivity extends AppCompatActivity {
 
     private void userInfoDisplay(final CircleImageView settingProfileImage, final EditText edSettingsFullName, final EditText edSettingsPhoneNo, final EditText edSettingAddress) {
         // now we need to create a database ref for the specific user who id logged in
-        DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("Users").child(Prevalent.currentOnlineUser.getPhoneNo());
+        DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("Users").child(CurrentUser.currentOnlineUser.getPhone());
         userRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
