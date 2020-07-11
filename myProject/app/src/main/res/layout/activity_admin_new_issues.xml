@@ -15,6 +15,7 @@
             android:id="@+id/tbSettings"
             android:layout_width="match_parent"
             app:titleTextColor="@android:color/white"
+            app:title="Issues"
             android:layout_height="wrap_content"/>
 
     </com.google.android.material.appbar.AppBarLayout>

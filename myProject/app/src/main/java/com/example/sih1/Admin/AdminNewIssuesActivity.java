@@ -37,11 +37,12 @@ public class AdminNewIssuesActivity extends AppCompatActivity {
 
     DatabaseReference newIssueRef;
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_new_issues);
+
+        Toolbar toolbar = findViewById(R.id.toolbar1);
 
         recyclerView = findViewById(R.id.rvNewIssues);
 
