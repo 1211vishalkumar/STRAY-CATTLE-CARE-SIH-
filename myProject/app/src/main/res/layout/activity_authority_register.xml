@@ -7,54 +7,8 @@
     android:background="#D6000000"
     tools:context=".AuthorityRegister">
 
-    <Button
-        android:id="@+id/btnLogIn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/button_design"
-        android:text="Login"
-        android:textAllCaps="false"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
-    <Button
-
-        android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/button_design"
-        android:text="Register"
-        android:textAllCaps="false"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogIn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
-
-    <ImageView
-        android:id="@+id/ivCattle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/cattleclipart"
-        app:layout_constraintBottom_toTopOf="@+id/tvRegPortal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
+        android:padding="5dp"
         android:id="@+id/tvRegPortal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -63,22 +17,22 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/inp_design"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_design"
         android:gravity="center_horizontal"
         android:text="Authority Registration Portal"
         android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="32sp"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:typeface="serif"
+        android:typeface="normal"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivCattle" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:padding="10dp"
         android:id="@+id/editTextTextPersonName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -86,11 +40,12 @@
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="2dp"
         android:background="@drawable/inp_design"
         android:ems="10"
         android:hint="Enter the Name of Organization"
         android:inputType="textPersonName"
+        android:padding="10dp"
         android:textColor="@android:color/white"
         android:textColorHint="#75FFFFFF"
         android:textSize="24sp"
@@ -100,7 +55,6 @@
         app:layout_constraintTop_toBottomOf="@+id/tvRegPortal" />
 
     <EditText
-        android:padding="10dp"
         android:id="@+id/editTextPhone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -108,11 +62,12 @@
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="2dp"
         android:background="@drawable/inp_design"
         android:ems="10"
         android:hint="Enter the Phone No"
         android:inputType="phone"
+        android:padding="10dp"
         android:textColor="@android:color/white"
         android:textColorHint="#75FFFFFF"
         android:textSize="24sp"
@@ -122,7 +77,6 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <EditText
-        android:padding="10dp"
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -130,21 +84,22 @@
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="2dp"
         android:background="@drawable/inp_design"
         android:ems="10"
         android:hint="Enter the Email of your organization"
         android:inputType="textEmailAddress"
+        android:padding="10dp"
         android:textColor="@android:color/white"
         android:textColorHint="#75FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
 
     <EditText
-        android:padding="10dp"
         android:id="@+id/editTextTextPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -152,11 +107,12 @@
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="2dp"
         android:background="@drawable/inp_design"
         android:ems="10"
         android:hint="Enter your password"
         android:inputType="textPassword"
+        android:padding="10dp"
         android:textColor="@android:color/white"
         android:textColorHint="#75FFFFFF"
         android:textSize="24sp"
@@ -166,7 +122,6 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
     <EditText
-        android:padding="10dp"
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -174,17 +129,112 @@
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="2dp"
         android:background="@drawable/inp_design"
         android:ems="10"
         android:hint="Enter Your Address"
         android:inputType="textPersonName"
+        android:padding="10dp"
         android:textColor="@android:color/white"
         android:textColorHint="#75FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2">
+
+        <Spinner
+            android:id="@+id/spinner4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_design"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="612dp" />
+
+        <Spinner
+            android:id="@+id/spinner5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_design"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="612dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:orientation="horizontal"
+        android:padding="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <Spinner
+            android:id="@+id/spinner6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_design"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_design"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="688dp" />
+
+    </LinearLayout>
+
+    <Button
+
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/button_design"
+        android:text="LogIn"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

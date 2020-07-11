@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".IssueCategoryActivity"></activity>
+        <activity android:name=".AuthorityLogIn"></activity>
+        <activity android:name=".IssueCategoryActivity" />
         <activity android:name=".UserSettingsActivity" />
         <activity android:name=".AddIssueActivity" />
         <activity android:name=".IssueDetailActivity" />

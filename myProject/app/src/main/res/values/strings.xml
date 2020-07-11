@@ -13,4 +13,28 @@
     <string name="menu_slideshow">Slideshow</string>
 
     <string name="home_second">Home Second</string>
+
+    <string-array name="stateArray">
+        <item>Andhra Pradesh</item>
+        <item>Bihar</item>
+        <item>Goa</item>
+        <item>Uttar Pradesh</item>
+    </string-array>
+
+    <string-array name="distArray">
+        <item>NorthGoa</item>
+        <item>SouthGoa</item>
+    </string-array>
+
+    <string-array name="blkArray">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+
 </resources>
