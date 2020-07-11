@@ -1,9 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#DC000000"
     android:layout_height="match_parent"
     tools:context=".UserSettingsActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarSettings"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvCloseSettings"
+                    android:layout_alignParentStart="true"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@android:color/black"
+                    android:text="Close "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:id="@+id/tvUpdateSettings"
+                    android:layout_marginRight="8dp"
+                    android:layout_alignParentEnd="true"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@android:color/black"
+                    android:text="Update "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        app:civ_border_width="2dp"
+        app:civ_border_color="@android:color/black"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/appBarSettings"
+        android:src="@drawable/profileimg"
+        android:id="@+id/settingProfileImage"
+        android:layout_width="130dp"
+        android:layout_height="130dp"/>
+
+    <TextView
+        android:layout_marginTop="4dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tvProfileImageChange"
+        android:layout_marginRight="8dp"
+        android:layout_below="@+id/settingProfileImage"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:textColor="#96FFFFFF"
+        android:text="Change Profile Img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:textColorHint="#96FFFFFF"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:background="@drawable/inp_design"
+        android:layout_margin="15dp"
+        android:hint="Phone Number"
+        android:id="@+id/edSettingsPhoneNo"
+        android:layout_below="@+id/tvProfileImageChange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:textColorHint="#96FFFFFF"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:background="@drawable/inp_design"
+        android:layout_margin="15dp"
+        android:hint="Full Name"
+        android:id="@+id/edSettingsFullName"
+        android:layout_below="@+id/edSettingsPhoneNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:textColorHint="#96FFFFFF"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:background="@drawable/inp_design"
+        android:layout_margin="15dp"
+        android:hint=" Address"
+        android:id="@+id/edSettingAddress"
+        android:layout_below="@+id/edSettingsFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:textColorHint="@android:color/black"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:background="@drawable/button_design"
+        android:layout_margin="15dp"
+        android:text="set Security Questions"
+        android:id="@+id/btnSettingsSecurityQuestions"
+        android:layout_below="@+id/edSettingAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+</RelativeLayout>
