@@ -23,6 +23,7 @@
             android:layout_marginTop="2dp"/>
 
         <TextView
+            android:layout_marginTop="10dp"
             android:id="@+id/tvIssueDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,7 +31,7 @@
             android:text="Issue Description"
             android:textColor="@android:color/white"
             android:textAlignment="center"
-            android:textSize="16dp"
+            android:textSize="20dp"
             android:textStyle="bold"
             android:gravity="center_horizontal" />
 
@@ -42,7 +43,8 @@
             android:text="Issue State"
             android:textColor="@android:color/white"
             android:textAlignment="center"
-            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
             android:textStyle="bold"
             android:gravity="center_horizontal" />
 

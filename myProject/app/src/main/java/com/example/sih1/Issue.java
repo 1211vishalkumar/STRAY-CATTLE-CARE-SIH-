@@ -10,19 +10,19 @@ public class Issue {
     }
 
 
-    public Issue(String description, String image, String category, String date, String time, String issueID, String issueState, String userName, String userPhone, String state, String country, String city) {
+    public Issue(String description, String image, String category, String date, String time, String issueState, String issueID, String userName, String userPhone, String state, String country, String city) {
         this.description = description;
         this.image = image;
         this.category = category;
         this.date = date;
         this.time = time;
         this.issueID = issueID;
-        this.issueState = issueState;
         this.userName = userName;
         this.userPhone = userPhone;
         this.state = state;
         this.country = country;
         this.city = city;
+        this.issueState = issueState;
     }
 
     public String getUserPhone() {
@@ -81,13 +81,7 @@ public class Issue {
         this.issueID = issueID;
     }
 
-    public String getIssueState() {
-        return issueState;
-    }
 
-    public void setIssueState(String productState) {
-        this.issueState = issueState;
-    }
 
     public String getUserName() {
         return userName;
@@ -119,5 +113,13 @@ public class Issue {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getIssueState() {
+        return issueState;
+    }
+
+    public void setIssueState(String issueState) {
+        this.issueState = issueState;
     }
 }

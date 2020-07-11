@@ -46,8 +46,6 @@ public class UserHomeActivity extends AppCompatActivity implements NavigationVie
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
 
-    private String type = "";
-
     DatabaseReference newIssueRef;
 
     @Override
@@ -55,11 +53,6 @@ public class UserHomeActivity extends AppCompatActivity implements NavigationVie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_home);
 
-        Intent intent = getIntent();
-        Bundle bundle= intent.getExtras();
-        if(bundle != null){
-            type = getIntent().getExtras().get("Admin").toString();
-        }
 
         newIssueRef = FirebaseDatabase.getInstance().getReference().child("Issues");
 
@@ -75,11 +68,9 @@ public class UserHomeActivity extends AppCompatActivity implements NavigationVie
             @Override
             public void onClick(View view) {
 
-                if(!type.equals("Admin")){
                     Intent intent = new Intent(UserHomeActivity.this, AddIssueActivity.class);
                     startActivity(intent);
 
-                }
 
             }
         });
@@ -95,11 +86,9 @@ public class UserHomeActivity extends AppCompatActivity implements NavigationVie
         TextView tvUserName = headerView.findViewById(R.id.user_name);
         CircleImageView profileImgView = headerView.findViewById(R.id.profile_image);
 
-        if(!type.equals("Admin")){
             tvUserName.setText(CurrentUser.currentOnlineUser.getName());
             Picasso.get().load(CurrentUser.currentOnlineUser.getImage()).placeholder(R.drawable.registerimg).into(profileImgView);
 
-        }
 
         recyclerView = findViewById(R.id.recycler_menu);
         recyclerView.setHasFixedSize(true);
@@ -135,7 +124,7 @@ public class UserHomeActivity extends AppCompatActivity implements NavigationVie
                                 };
 
                                 AlertDialog.Builder builder= new AlertDialog.Builder(UserHomeActivity.this);
-                                builder.setTitle("Want to Delete this product ?");
+                                builder.setTitle("Want to Delete this issue ?");
                                 builder.setItems(options, new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
@@ -194,16 +183,12 @@ public class UserHomeActivity extends AppCompatActivity implements NavigationVie
     public boolean onNavigationItemSelected(MenuItem item){
         int id = item.getItemId();
         if(id == R.id.pendingIssues){
-            if(!type.equals("Admin")){
-
                 Intent intent = new Intent(UserHomeActivity.this, MainActivity.class);
                 startActivity(intent);
-            }
 
 
         }
         else if(id == R.id.logout){
-            if(!type.equals("Admin")){
 
                 Paper.book().destroy();
 
@@ -211,23 +196,17 @@ public class UserHomeActivity extends AppCompatActivity implements NavigationVie
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 finish();
-            }
 
         }
         else if(id == R.id.categories){
-            if(!type.equals("Admin")){
 
                 Intent intent = new Intent(UserHomeActivity.this, IssueCategoryActivity.class);
                 startActivity(intent);
-            }
         }
         else if(id == R.id.settings){
-            if(!type.equals("Admin")){
 
                 Intent intent = new Intent(UserHomeActivity.this, UserSettingsActivity.class);
                 startActivity(intent);
-            }
-
 
         }
 
