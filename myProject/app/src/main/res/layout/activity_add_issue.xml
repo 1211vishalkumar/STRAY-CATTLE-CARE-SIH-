@@ -68,7 +68,8 @@
         app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner3" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner3"
+        android:layout_alignParentLeft="true" />
 
     <Spinner
         android:id="@+id/spinner2"
@@ -89,7 +90,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etIssueDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/etIssueDescription"
+        android:layout_alignParentLeft="true" />
 
     <Spinner
         android:id="@+id/spinner3"
@@ -108,7 +110,8 @@
         app:layout_constraintBottom_toTopOf="@+id/spinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner2"
+        android:layout_alignParentLeft="true" />
 
     <Button
         android:id="@+id/button5"

@@ -2,14 +2,15 @@ package com.example.sih1;
 
 public class Issue {
 
-    public String name, description, image, category, date, time, issueID, issueState;
+    public String description, image, category, date, time, issueID, issueState, userName, userPhone, state, country, city;
+
 
     public Issue(){
 
     }
 
-    public Issue(String name, String description, String image, String category, String date, String time, String issueID, String issueState) {
-        this.name = name;
+
+    public Issue(String description, String image, String category, String date, String time, String issueID, String issueState, String userName, String userPhone, String state, String country, String city) {
         this.description = description;
         this.image = image;
         this.category = category;
@@ -17,14 +18,19 @@ public class Issue {
         this.time = time;
         this.issueID = issueID;
         this.issueState = issueState;
+        this.userName = userName;
+        this.userPhone = userPhone;
+        this.state = state;
+        this.country = country;
+        this.city = city;
     }
 
-    public String getName() {
-        return name;
+    public String getUserPhone() {
+        return userPhone;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserPhone(String userPhone) {
+        this.userPhone = userPhone;
     }
 
     public String getDescription() {
@@ -81,5 +87,37 @@ public class Issue {
 
     public void setIssueState(String productState) {
         this.issueState = issueState;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 }

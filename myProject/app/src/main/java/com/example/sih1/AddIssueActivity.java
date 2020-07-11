@@ -90,6 +90,9 @@ public class AddIssueActivity extends AppCompatActivity {
 
         userRef = FirebaseDatabase.getInstance().getReference().child("User");
 
+        uName= CurrentUser.currentOnlineUser.getName();
+        uPhone = CurrentUser.currentOnlineUser.getPhone();
+
         initializeUI();
 
         ivIssue.setOnClickListener(new View.OnClickListener() {
