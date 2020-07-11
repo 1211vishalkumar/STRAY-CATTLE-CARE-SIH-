@@ -1,9 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/black"
     tools:context=".Admin.AdminHomeActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="130dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:text="Welcome Admin"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="100dp"
+        android:gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/btnAdminNewIssues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnAdminSolvedIssues"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/button_design"
+        android:text="Check new Issues"
+        android:textSize="22dp"
+        android:textAllCaps="false"
+        android:layout_marginBottom="26dp"
+        android:layout_marginRight="22dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:id="@+id/btnAdminSolvedIssues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnAdminLogout"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/button_design"
+        android:text="Check Solved Issues"
+        android:textSize="22dp"
+        android:textAllCaps="false"
+        android:layout_marginBottom="25dp"
+        android:layout_marginRight="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:id="@+id/btnAdminLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/button_design"
+        android:text="Logout"
+        android:textSize="22dp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"/>
+
+</RelativeLayout>

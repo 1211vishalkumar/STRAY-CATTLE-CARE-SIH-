@@ -46,5 +46,8 @@ dependencies {
 
     implementation 'io.paperdb:paperdb:2.6' //using paper library to save data in phone memory
 
-    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'// using library for image cropping
+
+    implementation 'com.firebaseui:firebase-ui-database:3.2.2'//dependency for using firebase recycler view
 }

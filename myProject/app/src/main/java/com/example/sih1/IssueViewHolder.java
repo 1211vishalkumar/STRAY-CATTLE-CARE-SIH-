@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class IssueViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-    TextView tvIssueName, tvIssueDescription;
+    TextView tvIssueDescription, tvIssueState;
     ImageView ivIssueImage;
 
     ItemClickListener listener;
@@ -18,8 +18,8 @@ public class IssueViewHolder extends RecyclerView.ViewHolder implements View.OnC
         super(itemView);
 
         ivIssueImage = itemView.findViewById(R.id.ivIssueImage);
-        tvIssueName = itemView.findViewById(R.id.tvIssueName);
         tvIssueDescription = itemView.findViewById(R.id.tvIssueDescription);
+        tvIssueState = itemView.findViewById(R.id.tvIssueState);
     }
 
     public void setItemClickListener(ItemClickListener listener){
