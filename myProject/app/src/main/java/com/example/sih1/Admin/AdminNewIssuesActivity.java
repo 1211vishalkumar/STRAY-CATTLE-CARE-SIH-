@@ -33,16 +33,12 @@ public class AdminNewIssuesActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
 
-    private String type = "";
-
     DatabaseReference newIssueRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_new_issues);
-
-        Toolbar toolbar = findViewById(R.id.toolbar1);
 
         recyclerView = findViewById(R.id.rvNewIssues);
 

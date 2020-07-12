@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Admin.AdminNewIssuesActivity">
-
+    tools:context=".UserSolvedIssuesActivity">
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/toolbar1"
         android:background="@android:color/black"
@@ -16,14 +15,14 @@
             android:id="@+id/tbSettings"
             android:layout_width="match_parent"
             app:titleTextColor="@android:color/white"
-            app:title="Active Issues"
+            app:title="My solved Issues"
             android:layout_height="wrap_content"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_below="@+id/toolbar1"
-        android:id="@+id/rvNewIssues"
+        android:id="@+id/rvUserSolvedIssues"
         android:layout_width="match_parent"
         android:scrollbars="vertical"
         android:layout_height="match_parent">

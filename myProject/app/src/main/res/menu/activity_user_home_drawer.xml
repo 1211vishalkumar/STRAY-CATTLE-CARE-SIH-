@@ -11,11 +11,11 @@
         <item
             android:id="@+id/pendingIssues"
             android:icon="@drawable/pendingissues"
-            android:title="Pending Issues" />
+            android:title="My Pending Issues" />
         <item
-            android:id="@+id/categories"
+            android:id="@+id/solvedIssues"
             android:icon="@drawable/category"
-            android:title="Category" />
+            android:title="My Solved Issues" />
         <item
             android:id="@+id/logout"
             android:icon="@drawable/logout"

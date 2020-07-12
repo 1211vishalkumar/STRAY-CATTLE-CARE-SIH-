@@ -156,7 +156,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 }
                 else{
-                    Toast.makeText(LoginActivity.this, "Account with this " + phone + "number do not exist",
+                    Toast.makeText(LoginActivity.this, "Account with this " + phone + "number does not exist",
                             Toast.LENGTH_SHORT).show();
                     mProgressDialog.dismiss();
                 }

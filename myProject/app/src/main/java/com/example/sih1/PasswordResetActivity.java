@@ -54,7 +54,7 @@ public class PasswordResetActivity extends AppCompatActivity {
 
         edPhoneNoResetActivity.setVisibility(View.GONE);
 
-        // here we gonna differntiate whether the user has come here from the SignIn Activity or the Setting Activity
+        // here we gonna differentiate whether the user has come here from the SignIn Activity or the Setting Activity
         if(check.equals("settings")){
 
             //then we goona change the fields accordingly
@@ -168,7 +168,7 @@ public class PasswordResetActivity extends AppCompatActivity {
 
         if(!phone.equals("") && !answer1.equals("") && !answer2.equals("")){
 
-            // now we gonna verfy the phone no ans and the 2 answers
+            // now we gonna verify the phone no ans and the 2 answers
             //ref
             final DatabaseReference ref = FirebaseDatabase.getInstance().getReference()
                     .child("User")
@@ -179,20 +179,20 @@ public class PasswordResetActivity extends AppCompatActivity {
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                     if(dataSnapshot.exists()){
-                        // now we gonna retrive the phone no which inside the database
+                        // now we gonna retrieve the phone no which inside the database
                         String mPhone = dataSnapshot.child("phone").getValue().toString();
 
                         // now we gonna check whether the user has already set the security questions or not
                         if(dataSnapshot.hasChild("Security Questions")){
-                            //  now we gonna retrive both the answers
+                            //  now we gonna retrieve both the answers
                             String ans1 = dataSnapshot.child("Security Questions").child("answer1").getValue().toString();
                             String ans2 = dataSnapshot.child("Security Questions").child("answer2").getValue().toString();
 
                             if(!ans1.equals(answer1)){
-                                Toast.makeText(PasswordResetActivity.this, "Your Answer to this Q.1 is incorrect ", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(PasswordResetActivity.this, "Your Answer to first que is incorrect ", Toast.LENGTH_SHORT).show();
                             }
                             else if(!ans2.equals(answer2)){
-                                Toast.makeText(PasswordResetActivity.this, "Your Answer to this Q.2 is incorrect", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(PasswordResetActivity.this, "Your Answer to second que is incorrect", Toast.LENGTH_SHORT).show();
                             }
                             else{
                                 // now we gonna allow the user to change the password
@@ -244,11 +244,11 @@ public class PasswordResetActivity extends AppCompatActivity {
                         }
                         else{
 
-                            Toast.makeText(PasswordResetActivity.this, "You have not set the security question. please contact us", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(PasswordResetActivity.this, "You have not set the security question", Toast.LENGTH_SHORT).show();
                         }
                     }
                     else {
-                        Toast.makeText(PasswordResetActivity.this, "This Phone is not registered", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PasswordResetActivity.this, "This Phone number is not registered", Toast.LENGTH_SHORT).show();
                     }
                 }
 

@@ -28,9 +28,9 @@ public class AdminSolvedIssuesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_new_issues);
+        setContentView(R.layout.activity_admin_solved_issues);
 
-        recyclerView = findViewById(R.id.rvNewIssues);
+        recyclerView = findViewById(R.id.rvSolvedIssues);
 
         newIssueRef = FirebaseDatabase.getInstance().getReference().child("Issues");
 

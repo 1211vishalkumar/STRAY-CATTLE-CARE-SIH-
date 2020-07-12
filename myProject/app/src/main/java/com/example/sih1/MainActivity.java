@@ -122,12 +122,12 @@ public class MainActivity extends AppCompatActivity {
                         }
                         else{
                             loadingBar.dismiss();
-                            Toast.makeText(MainActivity.this, "Oops!!! Password is incorrext", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Oops!!! Password is incorrect", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
                 else{
-                    Toast.makeText(MainActivity.this, "Account with this " + phone + "number do not exist",
+                    Toast.makeText(MainActivity.this, "Account with this " + phone + "number does not exist",
                             Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
                 }

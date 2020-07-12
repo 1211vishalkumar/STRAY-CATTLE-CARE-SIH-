@@ -115,7 +115,7 @@ public class UserSettingsActivity extends AppCompatActivity {
     }
 
     private void updateOnlyUserInfo() {
-        // in this we are not going to upadate the profie image of the user because the user has not clicked on it
+        // in this we are not going to update the profile image of the user because the user has not clicked on it
 
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("User");
 
@@ -143,7 +143,7 @@ public class UserSettingsActivity extends AppCompatActivity {
             // now we have to store this result which is basically a image uri to String variable imageUri
             imageUri = result.getUri();
 
-            // now we have to diaplay it to the imagaview also so the user can see which image they has selected
+            // now we have to display it to the imageView also so the user can see which image they has selected
             settingProfileImage.setImageURI(imageUri);
         }else{
             // if there any error occurs now we gonna display a tosat to the user'
@@ -174,10 +174,10 @@ public class UserSettingsActivity extends AppCompatActivity {
     }
 
     private void uploadImage() {
-        //creating progress diaolog
+        //creating progress dialog
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Updating Profile");
-        progressDialog.setMessage("Please Wait,while we updating your account information");
+        progressDialog.setMessage("Please Wait,while we are updating your account information");
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.show();
 
@@ -214,7 +214,7 @@ public class UserSettingsActivity extends AppCompatActivity {
                         progressDialog.dismiss();
                         startActivity(new Intent(UserSettingsActivity.this,UserHomeActivity.class));
 
-                        Toast.makeText(UserSettingsActivity.this, "Profile Info updated Successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(UserSettingsActivity.this, "Profile updated Successfully", Toast.LENGTH_SHORT).show();
                         finish();
 
                     }else{

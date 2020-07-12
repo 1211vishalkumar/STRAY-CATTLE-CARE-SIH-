@@ -9,14 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".UserSolvedIssuesActivity"></activity>
+        <activity android:name=".UserPendingIssuesActivity" />
         <activity android:name=".AdminSolvedIssuesActivity" />
         <activity android:name=".Admin.AdminNewIssuesActivity" />
         <activity android:name=".Authority.AuthorityLogIn" />
-        <activity android:name=".IssueCategoryActivity" />
         <activity android:name=".UserSettingsActivity" />
         <activity android:name=".AddIssueActivity" />
-        <activity android:name=".IssueDetailActivity" />
-        <activity android:name=".Admin.AdminMaintainIssuesActivity" />
         <activity android:name=".PasswordResetActivity" />
         <activity android:name=".Admin.AdminHomeActivity" />
         <activity
@@ -34,12 +33,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        //For using crop image feature
-        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
-            android:theme="@style/Base.Theme.AppCompat"/>
-
-
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
     </application>
 
 </manifest>

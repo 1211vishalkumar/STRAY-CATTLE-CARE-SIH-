@@ -113,7 +113,7 @@ public class UserRegisterActivity extends AppCompatActivity {
                             });
 
                 }else{
-                    Toast.makeText(UserRegisterActivity.this, "This" + phone + " already exists.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(UserRegisterActivity.this, "This" + phone + " number already exists.", Toast.LENGTH_LONG).show();
                     mProgressDialog.dismiss();
                     Toast.makeText(UserRegisterActivity.this, "Try again using another phone number.", Toast.LENGTH_SHORT).show();
 

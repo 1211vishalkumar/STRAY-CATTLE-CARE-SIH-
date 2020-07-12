@@ -121,7 +121,7 @@ public class AddIssueActivity extends AppCompatActivity {
         Description = etIssueDescription.getText().toString();
 
         if(TextUtils.isEmpty(Description) || TextUtils.isEmpty(country) || TextUtils.isEmpty(state) || TextUtils.isEmpty(city)){
-            Toast.makeText(this, "Add all  description", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please fill out all fields", Toast.LENGTH_SHORT).show();
         }
         else{
             StoreIssueInfo();

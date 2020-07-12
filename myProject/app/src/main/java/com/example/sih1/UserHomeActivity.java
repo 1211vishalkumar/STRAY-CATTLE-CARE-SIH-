@@ -183,7 +183,7 @@ public class UserHomeActivity extends AppCompatActivity implements NavigationVie
     public boolean onNavigationItemSelected(MenuItem item){
         int id = item.getItemId();
         if(id == R.id.pendingIssues){
-                Intent intent = new Intent(UserHomeActivity.this, MainActivity.class);
+                Intent intent = new Intent(UserHomeActivity.this, UserPendingIssuesActivity.class);
                 startActivity(intent);
 
 
@@ -198,9 +198,9 @@ public class UserHomeActivity extends AppCompatActivity implements NavigationVie
                 finish();
 
         }
-        else if(id == R.id.categories){
+        else if(id == R.id.solvedIssues){
 
-                Intent intent = new Intent(UserHomeActivity.this, IssueCategoryActivity.class);
+                Intent intent = new Intent(UserHomeActivity.this, UserSolvedIssuesActivity.class);
                 startActivity(intent);
         }
         else if(id == R.id.settings){

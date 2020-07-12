@@ -86,7 +86,7 @@ public class AuthorityRegister extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //here we goona create a method
+                //here we gonna create a method
                 registerAuthority();
             }
         });
@@ -143,7 +143,7 @@ public class AuthorityRegister extends AppCompatActivity {
                                             public void onComplete(@NonNull Task<Void> task) {
                                                 if(task.isSuccessful()){
                                                     loadingBar.dismiss();
-                                                    Toast.makeText(AuthorityRegister.this, "You have registered as Seller Successfully", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(AuthorityRegister.this, "You have registered as Authority Successfully", Toast.LENGTH_SHORT).show();
 
                                                     Intent intent = new Intent(AuthorityRegister.this, AuthorityHomeActivity.class);
                                                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

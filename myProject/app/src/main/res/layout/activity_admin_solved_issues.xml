@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminSolvedIssuesActivity">
+    tools:context=".Admin.AdminNewIssuesActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar1"
+        android:background="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbSettings"
+            android:layout_width="match_parent"
+            app:titleTextColor="@android:color/white"
+            app:title="Solved Issues"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/toolbar1"
+        android:id="@+id/rvSolvedIssues"
+        android:layout_width="match_parent"
+        android:scrollbars="vertical"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>
