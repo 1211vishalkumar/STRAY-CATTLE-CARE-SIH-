@@ -134,7 +134,7 @@ public class AuthorityRegister extends AppCompatActivity implements AdapterView.
                                 AuthorityMap.put("name",name);
                                 AuthorityMap.put("password",password);
 
-                                rootRef.child("Authority").child(locality).child(type).child(aid).updateChildren(AuthorityMap)
+                                rootRef.child("Authority").child(locality).child(type).updateChildren(AuthorityMap)
                                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
