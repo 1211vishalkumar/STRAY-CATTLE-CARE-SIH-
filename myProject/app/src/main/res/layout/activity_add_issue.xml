@@ -34,7 +34,7 @@
         android:layout_below="@id/ivIssue"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
@@ -44,74 +44,64 @@
         android:padding="20dp"
         android:textColor="@android:color/white"
         android:textColorHint="#96FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/spinner2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivIssue" />
 
-    <Spinner
-
-        android:id="@+id/spinner"
+    <TextView
+        android:id="@+id/tv1"
         android:layout_width="match_parent"
+        android:text="Choose the reason for issue"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="25dp"
+        android:textSize="18dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/etIssueDescription"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/button_design"
-        android:minHeight="25dp"
-        android:padding="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner3"
-        android:layout_alignParentLeft="true" />
+        android:gravity="center_horizontal" />
 
     <Spinner
-        android:id="@+id/spinner2"
         android:layout_width="match_parent"
+        android:id="@+id/spinnerIssueReason"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tv1"
+        android:layout_marginLeft="5dp"
+        android:textAlignment="center"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/button_design"
+        android:layout_height="45dp"
+        android:gravity="center_horizontal">
+
+    </Spinner>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:text="Choose your Locality"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="15dp"
+        android:textSize="18dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/spinnerIssueReason"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/button_design"
-        android:minHeight="25dp"
-        android:padding="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/spinner3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etIssueDescription"
-        android:layout_alignParentLeft="true" />
+        android:gravity="center_horizontal" />
 
     <Spinner
-        android:id="@+id/spinner3"
         android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
+        android:id="@+id/spinnerIssueLocality"
+        android:layout_marginTop="15dp"
+
         android:background="@drawable/button_design"
-        android:minHeight="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/spinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2"
-        android:layout_alignParentLeft="true" />
+        app:layout_constraintTop_toBottomOf="@id/tv2"
+        android:layout_marginLeft="5dp"
+        android:textAlignment="center"
+        android:layout_marginRight="5dp"
+        android:layout_height="45dp"
+        android:gravity="center_horizontal">
+
+    </Spinner>
+
+
 
     <Button
         android:id="@+id/button5"
@@ -132,8 +122,7 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

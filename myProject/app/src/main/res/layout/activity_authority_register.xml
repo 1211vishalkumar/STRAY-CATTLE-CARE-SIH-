@@ -17,7 +17,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/button_design"
         android:gravity="center_horizontal"
         android:text="Authority Registration Portal"
@@ -40,7 +40,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/inp_design"
         android:ems="10"
         android:hint="Enter the Name of Organization"
@@ -62,7 +62,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/inp_design"
         android:ems="10"
         android:hint="Enter the Phone No"
@@ -84,7 +84,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/inp_design"
         android:ems="10"
         android:hint="Enter the Email of your organization"
@@ -107,7 +107,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/inp_design"
         android:ems="10"
         android:hint="Enter your password"
@@ -128,8 +128,9 @@
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/inp_design"
         android:ems="10"
         android:hint="Enter Your Address"
@@ -138,82 +139,79 @@
         android:textColor="@android:color/white"
         android:textColorHint="#75FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:text="Choose the type of organization"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="15dp"
+        android:textSize="18dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName2"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:id="@+id/spinnerType"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tv1"
+        android:layout_marginLeft="5dp"
+        android:textAlignment="center"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/button_design"
+        android:layout_height="45dp"
+        android:gravity="center_horizontal">
+
+    </Spinner>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:text="Choose your Locality"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="15dp"
+        android:textSize="18dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/spinnerType"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:id="@+id/spinnerLocality"
+        android:layout_marginTop="15dp"
+
+        android:background="@drawable/button_design"
+        app:layout_constraintTop_toBottomOf="@id/tv2"
+        android:layout_marginLeft="5dp"
+        android:textAlignment="center"
+        android:layout_marginRight="5dp"
+        android:layout_height="45dp"
+        android:gravity="center_horizontal">
+
+    </Spinner>
+
+    <Button
+        android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2">
 
-        <Spinner
-            android:id="@+id/spinner4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/button_design"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="612dp" />
-
-        <Spinner
-            android:id="@+id/spinner5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/button_design"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="612dp" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="3dp"
-        android:orientation="horizontal"
-        android:padding="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <Spinner
-            android:id="@+id/spinner6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:layout_weight="1"
-            android:background="@drawable/button_design"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:layout_weight="1"
-            android:background="@drawable/button_design"
-            android:text="Register"
-            android:textAllCaps="false"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="54dp"
-            tools:layout_editor_absoluteY="688dp" />
-
-    </LinearLayout>
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/button_design"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/button2"/>
 
     <Button
 
@@ -233,8 +231,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        app:layout_constraintStart_toStartOf="parent"></Button>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
