@@ -209,6 +209,11 @@ public class AddIssueActivity extends AppCompatActivity implements AdapterView. 
     }
 
     private void saveIssueInfoToDatabase() {
+        DatabaseReference authRef;
+        String s= "aid";
+        authRef = FirebaseDatabase.getInstance().getReference().child("Authority");
+         String auth=authRef.child(locality)
+                .child(reason).child("aid").toString();
         HashMap<String, Object> issueMap = new HashMap<>();
         issueMap.put("issueID", IssueRandomKey);
         issueMap.put("date", saveCurrDate);
@@ -220,6 +225,7 @@ public class AddIssueActivity extends AppCompatActivity implements AdapterView. 
         issueMap.put("userPhone", uPhone);
         issueMap.put("reason", reason);
         issueMap.put("locality", locality);
+        issueMap.put("AuthId", auth);
 
         issueRef.child(IssueRandomKey).updateChildren(issueMap)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -233,10 +239,6 @@ public class AddIssueActivity extends AppCompatActivity implements AdapterView. 
                             loadingBar.dismiss();
                             Toast.makeText(AddIssueActivity.this, "Issue Reported successfully", Toast.LENGTH_SHORT).show();
 
-                            DatabaseReference authRef;
-                            String s= "aid";
-                            authRef = FirebaseDatabase.getInstance().getReference().child("Authority").child(locality)
-                                    .child(reason);
 
                         } else {
 
