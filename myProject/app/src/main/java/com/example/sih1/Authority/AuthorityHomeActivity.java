@@ -35,5 +35,7 @@ public class AuthorityHomeActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
     }
 }
