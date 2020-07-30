@@ -37,6 +37,8 @@ public class AuthorityRegister extends AppCompatActivity implements AdapterView.
     private FirebaseAuth mAuth ;
     private ProgressDialog loadingBar;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -131,9 +133,8 @@ public class AuthorityRegister extends AppCompatActivity implements AdapterView.
                                 AuthorityMap.put("address",address);
                                 AuthorityMap.put("name",name);
                                 AuthorityMap.put("password",password);
-                                AuthorityMap.put("locality",locality);
 
-                                rootRef.child("Authority").child(type).child(aid).updateChildren(AuthorityMap)
+                                rootRef.child("Authority").child(locality).child(type).child(aid).updateChildren(AuthorityMap)
                                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {

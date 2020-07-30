@@ -233,6 +233,11 @@ public class AddIssueActivity extends AppCompatActivity implements AdapterView. 
                             loadingBar.dismiss();
                             Toast.makeText(AddIssueActivity.this, "Issue Reported successfully", Toast.LENGTH_SHORT).show();
 
+                            DatabaseReference authRef;
+                            String s= "aid";
+                            authRef = FirebaseDatabase.getInstance().getReference().child("Authority").child(locality)
+                                    .child(reason);
+
                         } else {
 
                             loadingBar.dismiss();
