@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class AuthorityHomeActivity extends AppCompatActivity {
 
-    Button btnAuthLogout;
+    Button btnAuthLogout, btnAuthNewIssue, btnAuthSolvedIssue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,12 @@ public class AuthorityHomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_authority_home);
 
         btnAuthLogout = findViewById(R.id.btnAuthLogout);
+
+        btnAuthNewIssue = findViewById(R.id.btnAuthNewIssues);
+
+        btnAuthSolvedIssue = findViewById(R.id.btnAuthSolvedIssues);
+
+
 
         final FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
@@ -36,6 +42,17 @@ public class AuthorityHomeActivity extends AppCompatActivity {
             }
         });
 
+<<<<<<< HEAD
 
+=======
+        btnAuthNewIssue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AuthorityHomeActivity.this, AuthNewIssueActivity.class);
+
+                startActivity(intent);
+            }
+        });
+>>>>>>> 0e01b1ee9f36288e3057a52c25e1b30f86593298
     }
 }

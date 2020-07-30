@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UserSolvedIssuesActivity"></activity>
+        <activity android:name=".Authority.AuthNewIssueActivity"></activity>
+        <activity android:name=".UserSolvedIssuesActivity" />
         <activity android:name=".UserPendingIssuesActivity" />
         <activity android:name=".AdminSolvedIssuesActivity" />
         <activity android:name=".Admin.AdminNewIssuesActivity" />
