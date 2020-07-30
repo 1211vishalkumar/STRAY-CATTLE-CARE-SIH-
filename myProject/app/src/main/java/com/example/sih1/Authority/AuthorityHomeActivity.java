@@ -42,9 +42,6 @@ public class AuthorityHomeActivity extends AppCompatActivity {
             }
         });
 
-<<<<<<< HEAD
-
-=======
         btnAuthNewIssue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,6 +50,5 @@ public class AuthorityHomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
->>>>>>> 0e01b1ee9f36288e3057a52c25e1b30f86593298
     }
 }
