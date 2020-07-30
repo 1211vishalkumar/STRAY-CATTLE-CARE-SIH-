@@ -58,6 +58,8 @@ public class AddIssueActivity extends AppCompatActivity implements AdapterView. 
 
     private String uName, uPhone, uId;
 
+    public String str;
+
     Spinner spinner1, spinner2;
 
 
@@ -209,46 +211,58 @@ public class AddIssueActivity extends AppCompatActivity implements AdapterView. 
     }
 
     private void saveIssueInfoToDatabase() {
-        DatabaseReference authRef;
-        String s= "aid";
-        authRef = FirebaseDatabase.getInstance().getReference().child("Authority");
-         String auth=authRef.child(locality)
-                .child(reason).child("aid").toString();
-        HashMap<String, Object> issueMap = new HashMap<>();
-        issueMap.put("issueID", IssueRandomKey);
-        issueMap.put("date", saveCurrDate);
-        issueMap.put("time", saveCurrTime);
-        issueMap.put("description", Description);
-        issueMap.put("image", downloadImageUrl);
-        issueMap.put("issueState", status);
-        issueMap.put("userName", uName);
-        issueMap.put("userPhone", uPhone);
-        issueMap.put("reason", reason);
-        issueMap.put("locality", locality);
-        issueMap.put("AuthId", auth);
 
-        issueRef.child(IssueRandomKey).updateChildren(issueMap)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
+        DatabaseReference authRef = FirebaseDatabase.getInstance().getReference();
+         DatabaseReference newAuthRef = authRef.child("Authority").child(locality).child(reason).child("aid");
 
-                            Intent intent = new Intent(AddIssueActivity.this, UserHomeActivity.class);
-                            startActivity(intent);
+         newAuthRef.addListenerForSingleValueEvent(new ValueEventListener() {
+             @Override
+             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                str = snapshot.getValue(String.class);
 
-                            loadingBar.dismiss();
-                            Toast.makeText(AddIssueActivity.this, "Issue Reported successfully", Toast.LENGTH_SHORT).show();
+                 HashMap<String, Object> issueMap = new HashMap<>();
+                 issueMap.put("issueID", IssueRandomKey);
+                 issueMap.put("date", saveCurrDate);
+                 issueMap.put("time", saveCurrTime);
+                 issueMap.put("description", Description);
+                 issueMap.put("image", downloadImageUrl);
+                 issueMap.put("issueState", status);
+                 issueMap.put("userName", uName);
+                 issueMap.put("userPhone", uPhone);
+                 issueMap.put("reason", reason);
+                 issueMap.put("locality", locality);
+                 issueMap.put("AuthId", str);
+
+                 issueRef.child(IssueRandomKey).updateChildren(issueMap)
+                         .addOnCompleteListener(new OnCompleteListener<Void>() {
+                             @Override
+                             public void onComplete(@NonNull Task<Void> task) {
+                                 if (task.isSuccessful()) {
+
+                                     Intent intent = new Intent(AddIssueActivity.this, UserHomeActivity.class);
+                                     startActivity(intent);
+
+                                     loadingBar.dismiss();
+                                     Toast.makeText(AddIssueActivity.this, "Issue Reported successfully", Toast.LENGTH_SHORT).show();
 
 
-                        } else {
+                                 } else {
 
-                            loadingBar.dismiss();
-                            String msg = task.getException().toString();
-                            Toast.makeText(AddIssueActivity.this, "Error: " + msg, Toast.LENGTH_SHORT).show();
+                                     loadingBar.dismiss();
+                                     String msg = task.getException().toString();
+                                     Toast.makeText(AddIssueActivity.this, "Error: " + msg, Toast.LENGTH_SHORT).show();
 
-                        }
-                    }
-                });
+                                 }
+                             }
+                         });
+             }
+
+             @Override
+             public void onCancelled(@NonNull DatabaseError error) {
+
+             }
+         });
+
     }
 
 
